@@ -13,7 +13,8 @@ using namespace std;
 Mat image;
 int iksz,ipszilon;
 
-void redraw(){
+void redraw()
+{
     rectangle(image, Point(0,0),Point(WIDTH,HEIGHT), Scalar(0,0,0),CV_FILLED);
     rectangle(image, Point(iksz,ipszilon),Point(iksz+100,ipszilon+100), Scalar(255,0,0));
     imshow( "Display window", image );                   // Show our image inside it.
@@ -36,12 +37,8 @@ int main( int argc, char** argv )
     iksz=-100.0;
     ipszilon=-100.0;
 
-
-
     namedWindow( "Display window", WINDOW_AUTOSIZE );// Create a window for display.
     setMouseCallback("Display window", MouseCallBackFunc, NULL);
-
-
 
     imshow( "Display window", image );                   // Show our image inside it.
 
